@@ -39,7 +39,7 @@ public class Producto {
     @Column(name = "proveedor", nullable = false, length = 40)
     private String supplier;
 
-    @Column(name = "fecha elaboracion")
+    @Column(name = "fechaElaboracion")
     private Date fechaElb;
 
     @Column(name = "precio")

@@ -2,17 +2,16 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>productos</title>
     <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
 </head>
 <body>
     <h1>HOLA QUE TAL</h1>
     
-    <main>
-        <table class="table table-dark">
-            <thead>
+      <div class="container text_Center">
+        <table class="table">
+            <thead class="table-dark">
               <tr>
                 <th scope="col">id</th>
                 <th scope="col">Nombre</th>
@@ -23,8 +22,8 @@
               </tr>
             </thead>
             <tbody>
-              <tr th:each="producto : ${listaDeProductos}">
-                <td th:text = "${producto.id}"></td>
+              <tr th:each="producto:${productoss}">
+                <td th:text="${producto.id}"></td>
                 <td th:text = "${producto.name}"></td>
                 <td th:text = "${producto.brand}"></td>
                 <td th:text = "${producto.supplier}"></td>
@@ -34,7 +33,8 @@
               </tr>
             </tbody>
           </table>
-    </main>
+        </div>
+    
     
 </body>
 </html>

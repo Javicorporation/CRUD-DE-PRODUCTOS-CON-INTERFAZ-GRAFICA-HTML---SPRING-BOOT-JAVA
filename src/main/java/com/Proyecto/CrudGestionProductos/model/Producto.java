@@ -30,19 +30,19 @@ public class Producto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "nombre",nullable = false, length = 40)
+    @Column(nullable = false, length = 40)
     private String name;
 
-    @Column(name = "marca",nullable = false, length = 40)
+    @Column(nullable = false, length = 40)
     private String brand;
 
-    @Column(name = "proveedor", nullable = false, length = 40)
+    @Column(nullable = false, length = 40)
     private String supplier;
 
-    @Column(name = "fechaElaboracion")
+    @Column()
     private Date fechaElb;
 
-    @Column(name = "precio")
+    @Column()
     private float price;
 
 }

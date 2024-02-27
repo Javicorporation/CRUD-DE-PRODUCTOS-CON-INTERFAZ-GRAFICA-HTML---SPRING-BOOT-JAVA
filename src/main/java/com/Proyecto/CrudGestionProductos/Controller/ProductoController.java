@@ -3,24 +3,25 @@ package com.Proyecto.CrudGestionProductos.Controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-import com.Proyecto.CrudGestionProductos.Service.ProductoService;
+import com.Proyecto.CrudGestionProductos.Service.ImProductoService;
 import com.Proyecto.CrudGestionProductos.model.Producto;
 
-@RestController
-@RequestMapping("Gestion")
+@Controller
+@RequestMapping
 public class ProductoController {
     @Autowired
-    private ProductoService productoService;
+    private ImProductoService imProductoService;
 
-    @RequestMapping("/")
-    public String paginaPrincipal(Model model){
-        List<Producto> ListaDeProductos = productoService.getAll();
-        model.addAttribute("listaDeProductos", ListaDeProductos);
-        return "Index";
+    @GetMapping("/")
+    public String verPaginaPrincipal(Model model){
+        List<Producto> productos = imProductoService.getListAll();
+        model.addAttribute("productoss", productos);
+        return "index";
     }
         
 

@@ -9,13 +9,15 @@ import com.Proyecto.CrudGestionProductos.Repository.ProductoRepository;
 import com.Proyecto.CrudGestionProductos.model.Producto;
 
 @Service
-public class ProductoService implements ImpProductoService {
+public class ProductoService implements ImProductoService{
+
     @Autowired 
     ProductoRepository productoRepository;
 
+
     @Override
-    public List<Producto> getAll(){
-        return productoRepository.findAll();
+    public List<Producto> getListAll(){
+        return (List<Producto>)productoRepository.findAll();
     }
 
     @Override
@@ -23,6 +25,7 @@ public class ProductoService implements ImpProductoService {
         return productoRepository.findById(id).orElse(null);
     }
 
+    
     
     @Override
     public Producto save(Producto producto){
@@ -33,6 +36,7 @@ public class ProductoService implements ImpProductoService {
     public void delete(long id){
         productoRepository.deleteById(id);
     }
+
 
     @Override
     public Producto update(long id, Producto productoUpdate){

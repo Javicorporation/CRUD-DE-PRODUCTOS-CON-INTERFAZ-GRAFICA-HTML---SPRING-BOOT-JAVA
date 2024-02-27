@@ -4,9 +4,9 @@ import java.util.List;
 
 import com.Proyecto.CrudGestionProductos.model.Producto;
 
-public interface ImpProductoService {
+public interface ImProductoService {
 
-    List<Producto> getAll();
+    List<Producto> getListAll();
 
     Producto findByIdPro(long id);
 

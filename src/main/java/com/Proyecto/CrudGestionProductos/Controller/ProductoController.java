@@ -18,8 +18,8 @@ public class ProductoController {
 
     @RequestMapping("/")
     public String paginaPrincipal(Model model){
-        List<Producto> ListarProductos = productoService.getAll();
-        model.addAttribute("listaProductos", ListarProductos);
+        List<Producto> ListaDeProductos = productoService.getAll();
+        model.addAttribute("listaDeProductos", ListaDeProductos);
         return "Index";
     }
         

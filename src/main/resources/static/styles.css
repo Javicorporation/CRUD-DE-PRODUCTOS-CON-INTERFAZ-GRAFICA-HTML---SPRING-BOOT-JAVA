@@ -1,0 +1,35 @@
+body {
+    background-color: #f0f0f0; /* Fondo gris claro */
+    font-family: Arial, sans-serif;
+  }
+  
+  .main-container {
+    margin: 150px auto;
+    width: 80%; /* Ajusta el ancho según sea necesario */
+  }
+  
+  table {
+    background-color: #fff; /* Fondo blanco */
+    text-align: center;
+    width: 100%;
+  }
+  
+  th,
+  td {
+    padding: 10px;
+    border: 1px solid #ddd; /* Agrega bordes para mejor separación */
+  }
+  
+  thead {
+    background-color: #333; /* Encabezado gris oscuro */
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Agrega consultas de medios para diseño responsivo */
+  @media (max-width: 768px) {
+    .main-container {
+      width: 100%;
+    }
+  }
+

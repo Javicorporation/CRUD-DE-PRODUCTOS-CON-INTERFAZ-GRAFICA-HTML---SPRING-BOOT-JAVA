@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>productos</title>
+    <link href="styles.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+</head>
+<body>
+    <h1>HOLA QUE TAL</h1>
+    
+      <div class="main-container">
+        <table class="table">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Proveedor</th>
+                <th scope="col">Fecha de elaboracion</th>
+                <th scope="col">Precio</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr th:each="producto:${productoss}">
+                <td th:text="${producto.id}"></td>
+                <td th:text = "${producto.name}"></td>
+                <td th:text = "${producto.brand}"></td>
+                <td th:text = "${producto.supplier}"></td>
+                <td th:text = "${producto.fechaElb}"></td>
+                <td th:text = "${producto.price}"></td>
+                
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    
+    
+</body>
+</html>

@@ -7,11 +7,20 @@ body {
     margin: 150px auto;
     width: 80%; /* Ajusta el ancho según sea necesario */
   }
+  .table{
+    margin: 1em 0;
+    min-width: 300px;
+  }
   
   table {
     background-color: #fff; /* Fondo blanco */
     text-align: center;
     width: 100%;
+  }
+
+  tr {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
   }
   
   th,

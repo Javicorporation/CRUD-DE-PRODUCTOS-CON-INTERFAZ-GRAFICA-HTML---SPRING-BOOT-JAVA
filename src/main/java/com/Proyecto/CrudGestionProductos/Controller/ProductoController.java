@@ -19,9 +19,13 @@ public class ProductoController {
 
     @GetMapping("/")
     public String verPaginaPrincipal(Model model){
+        return "index";
+    }
+    @GetMapping("productos")
+    public String verPaginaTabla(Model model){
         List<Producto> productos = imProductoService.getListAll();
         model.addAttribute("productoss", productos);
-        return "index";
+        return "tablaProductos";
     }
         
 

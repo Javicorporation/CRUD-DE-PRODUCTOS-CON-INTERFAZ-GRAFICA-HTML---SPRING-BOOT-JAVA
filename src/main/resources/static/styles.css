@@ -1,6 +1,6 @@
 body {
   min-height: 100vh;
-  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+  background-image: url('/src/main/resources/static/img/arbol.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

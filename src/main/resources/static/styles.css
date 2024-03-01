@@ -1,11 +1,12 @@
 body {
   min-height: 100vh;
-  background: url("../static/img/fondo1.jpeg");
+  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   font-family: "Poppins", sans-serif
 }
+
 
 .main-container {
   margin: 150px auto;

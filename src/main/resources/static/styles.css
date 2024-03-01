@@ -1,6 +1,19 @@
+/* NAV BAR*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
 body {
-    background-color: #f0f0f0; /* Fondo gris claro */
-    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: url("../static/img/fondo1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: "Poppins", sans-serif
+
   }
   
   .main-container {
@@ -40,5 +53,9 @@ body {
     .main-container {
       width: 100%;
     }
+  }
+
+  h1{
+    text-align: center;
   }
 

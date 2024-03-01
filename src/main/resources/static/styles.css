@@ -1,6 +1,6 @@
 body {
   min-height: 100vh;
-  background-image: url('/src/main/resources/static/img/arbol.png');
+  background-image: url("img/arbol.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

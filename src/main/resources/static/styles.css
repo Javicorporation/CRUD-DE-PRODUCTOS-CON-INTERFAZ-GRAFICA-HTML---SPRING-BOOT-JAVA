@@ -57,3 +57,27 @@ h1 {
 }
 
 /* NAV BAR*/
+
+a{
+  text-decoration: none;
+  color: #ddd;
+  font-size: 1rem;
+}
+a:hover{
+  color: black;
+}
+
+header{
+  position: relative;
+  padding: 0 2rem;
+}
+
+.navbar{
+  width: 100px;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

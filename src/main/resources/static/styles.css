@@ -53,33 +53,15 @@ thead {
 
 
 /* NAV BAR*/
-
-.navbar {
-  background-color: #333;
-  
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+li{
+  list-style: none;
+}
 
 a{
   text-decoration: none;
@@ -87,7 +69,68 @@ a{
   font-size: 1rem;
 }
 a:hover{
-  color: black;
+  color: rgb(238, 148, 30);
+}
+
+.navbar {
+  /*background-color: #333;*/
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.navbar .links{
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar .logo a{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.navbar .toble-btn{
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.action-btn{
+  background-color: black;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.action-btn:hover{
+  scale:1.05;
+  color: #fff;
+}
+
+.action-btn:active{
+  scale: 0.95;
 }
 
 
+
+
+/*
+.links li{
+  margin-right: 20px;
+}
+
+.links li:last-child{
+  margin-right: 0;
+}
+
+.links a {
+  color: #fff;
+  text-decoration: none;
+}*/

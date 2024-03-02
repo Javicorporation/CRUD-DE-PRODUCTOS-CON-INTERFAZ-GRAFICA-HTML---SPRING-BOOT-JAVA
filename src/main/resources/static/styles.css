@@ -45,10 +45,22 @@ thead {
 }
 
 /* Agrega consultas de medios para diseño responsivo */
-@media (max-width: 768px) {
-  .main-container {
-    width: 100%;
+@media  only screen and (max-width: 770px) {
+ 
+
+  /*navBar*/
+  .navbar .links{
+    display: none;
   }
+
+  .navbar .toble-btn{
+    display: block;
+  }
+
+  .navbar {
+    justify-content: space-between; /* Cambia la justificación del contenido */
+  }
+
 }
 
 
@@ -98,7 +110,7 @@ a:hover{
 }
 
 .action-btn{
-  background-color: black;
+  background-color: rgb(212, 146, 22);
   color: #fff;
   padding: 0.5rem 1rem;
   border: none;
@@ -107,11 +119,12 @@ a:hover{
   font-size: 0.8rem;
   font-weight: bold;
   cursor: pointer;
+  transition: scale 0.2 ease;
 }
 
 .action-btn:hover{
   scale:1.05;
-  color: #fff;
+  color: #000000;
 }
 
 .action-btn:active{

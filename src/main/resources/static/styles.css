@@ -45,20 +45,18 @@ thead {
 }
 
 /* Agrega consultas de medios para diseño responsivo */
-@media  only screen and (max-width: 770px) {
- 
+@media (max-width: 768px) {
+  .main-container {
+    width: 100%;
+  }
 
   /*navBar*/
-  .navbar .links{
+  .navbar .links, .navbar .action-btn{
     display: none;
   }
 
   .navbar .toble-btn{
     display: block;
-  }
-
-  .navbar {
-    justify-content: space-between; /* Cambia la justificación del contenido */
   }
 
 }

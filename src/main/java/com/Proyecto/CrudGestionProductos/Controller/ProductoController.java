@@ -12,16 +12,16 @@ import com.Proyecto.CrudGestionProductos.Service.ImProductoService;
 import com.Proyecto.CrudGestionProductos.model.Producto;
 
 @Controller
-@RequestMapping
+
 public class ProductoController {
     @Autowired
     private ImProductoService imProductoService;
 
-    @GetMapping("/")
+    @RequestMapping("/")
     public String verPaginaPrincipal(Model model){
         return "index";
     }
-    @GetMapping("productos")
+    @GetMapping("/productos")
     public String verPaginaTabla(Model model){
         List<Producto> productos = imProductoService.getListAll();
         model.addAttribute("productoss", productos);
@@ -29,9 +29,10 @@ public class ProductoController {
     }
        
     @RequestMapping("/Nuevo")
-    public Producto newProducto(Producto producto){
-        Producto newP = imProductoService.save(producto);
-        return newP;
+    public String newProducto(Model model){
+        Producto producto = new Producto();
+        model.addAttribute("producto",producto);
+        return "ProductoNuevo";
     }
 
 }

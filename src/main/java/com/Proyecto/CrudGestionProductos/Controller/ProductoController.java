@@ -27,6 +27,11 @@ public class ProductoController {
         model.addAttribute("productoss", productos);
         return "tablaProductos";
     }
-        
+       
+    @RequestMapping("/Nuevo")
+    public Producto newProducto(Producto producto){
+        Producto newP = imProductoService.save(producto);
+        return newP;
+    }
 
 }

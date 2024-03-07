@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.Proyecto.CrudGestionProductos.Service.ImProductoService;
 import com.Proyecto.CrudGestionProductos.model.Producto;
@@ -33,6 +35,12 @@ public class ProductoController {
         Producto producto = new Producto();
         model.addAttribute("producto",producto);
         return "ProductoNuevo";
+    }
+
+    @RequestMapping(value = "/guardar", method = RequestMethod.POST)
+    public String guardarProducto(@ModelAttribute("producto") Producto producto){
+        imProductoService.save(producto);
+        return "redirect:/";
     }
 
 }

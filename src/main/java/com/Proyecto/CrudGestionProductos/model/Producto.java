@@ -1,6 +1,6 @@
 package com.Proyecto.CrudGestionProductos.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -19,7 +19,9 @@ public class Producto {
     public Producto() {
     }
 
-    public Producto(long id, String name, String brand, String supplier, Date fechaElb, float price) {
+    
+
+    public Producto(long id, String name, String brand, String supplier, LocalDate fechaElb, float price) {
         this.id = id;
         this.name = name;
         this.brand = brand;
@@ -27,6 +29,8 @@ public class Producto {
         this.fechaElb = fechaElb;
         this.price = price;
     }
+
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -42,7 +46,7 @@ public class Producto {
     private String supplier;
 
     @Temporal(TemporalType.DATE)
-    private Date fechaElb;
+    private LocalDate fechaElb;
 
     @Column()
     private float price;

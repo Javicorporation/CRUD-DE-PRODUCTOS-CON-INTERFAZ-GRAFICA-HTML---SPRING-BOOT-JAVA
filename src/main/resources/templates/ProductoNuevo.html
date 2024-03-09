@@ -80,7 +80,7 @@
                   $('#marcas').change(function() {
                       if ($(this).val() === 'Otro') {
                           $('#otraMarca').show();
-                      } else {
+                      }else {
                           $('#otraMarca').hide();
                       }
                   });
@@ -89,6 +89,15 @@
 
             <div class="form-group">
               <label>Proveedor: </label>
+              <select name="Proveedor" th:field="*{supplier}" class="form-control" id="proveedore">
+                <option value="Claro">Claro</option>
+                <option value="Movistar">Movistar</option>
+                <option value="Samsung Electronics">Samsung Electronics</option>
+                <option value="Huawei Technologies">Huawei Technologies</option>
+                <option value="LG Electronics">LG Electronics</option>
+                <option value="Cnt">Cnt</option>
+                <option value="Otro">Otro</option>
+              </select>
               <input type="text" name="Proveedor" th:field="*{supplier}" class="form-control" placeholder="Digite el Proveedor" required>              
             </div>
             <div class="form-group">

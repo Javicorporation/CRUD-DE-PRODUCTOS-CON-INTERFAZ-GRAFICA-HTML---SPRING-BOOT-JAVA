@@ -14,15 +14,29 @@ import com.Proyecto.CrudGestionProductos.Service.ImProductoService;
 import com.Proyecto.CrudGestionProductos.model.Producto;
 
 @Controller
-
 public class ProductoController {
     @Autowired
     private ImProductoService imProductoService;
+
+    /*
+    @GetMapping
+    public ResponseEntity<?> traer(){
+        List<Producto> getp = imProductoService.getListAll();
+        return ResponseEntity.ok(getp);
+    }
+
+    @PostMapping()
+    public ResponseEntity<?> sav(@RequestBody Producto producto){
+        Producto ppr = imProductoService.save(producto);
+        return ResponseEntity.ok(ppr);
+    }
+    */
 
     @RequestMapping("/")
     public String verPaginaPrincipal(Model model){
         return "index";
     }
+
     @GetMapping("/productos")
     public String verPaginaTabla(Model model){
         List<Producto> productos = imProductoService.getListAll();
@@ -41,6 +55,7 @@ public class ProductoController {
     public String guardarProducto(@ModelAttribute("producto") Producto producto){
         imProductoService.save(producto);
         return "redirect:/";
-    }
+    } 
+    
 
 }

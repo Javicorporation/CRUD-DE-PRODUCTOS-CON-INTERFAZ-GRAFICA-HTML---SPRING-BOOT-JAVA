@@ -54,7 +54,7 @@ public class ProductoController {
     @RequestMapping(value = "/guardar", method = RequestMethod.POST)
     public String guardarProducto(@ModelAttribute("producto") Producto producto){
         imProductoService.save(producto);
-        return "redirect:/";
+        return "redirect:productos";
     } 
     
 

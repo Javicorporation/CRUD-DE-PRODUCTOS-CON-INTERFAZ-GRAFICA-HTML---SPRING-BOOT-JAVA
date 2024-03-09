@@ -39,9 +39,9 @@
         <li class="nav-item active">
           <a class="nav-link" href="/productos">Tabla de productos <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
+        <!--<li class="nav-item">
           <a class="nav-link" href="/Nuevo">Nuevo Producto</a>
-        </li>
+        </li>-->
       </ul>
     </div>
   </nav>
@@ -71,7 +71,7 @@
                 <option value="Apple">Apple</option>
                 <option value="Otro">Otro</option>
               </select>
-              <input type="text" id="otraMarca" name="OtraMarca" th:field="*{brand}" class="form-control" placeholder="Digite la marca" style="display: none;">
+              <input type="text" id="otraMarca" name="OtraMarca" th:field="*{brand}" class="form-control" placeholder="Digite su marca" style="display: none;">
             </div>
 
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -98,7 +98,7 @@
                 <option value="Cnt">Cnt</option>
                 <option value="Otro">Otro</option>
               </select>
-              <input type="text" name="Proveedor" th:field="*{supplier}" class="form-control" placeholder="Digite el Proveedor" required>              
+              <input type="text" name="Proveedor" th:field="*{supplier}" class="form-control" placeholder="Digite su Proveedor" required>              
             </div>
             <div class="form-group">
               <label>Fecha de elaboracion: </label>

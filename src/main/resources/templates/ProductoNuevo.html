@@ -58,11 +58,25 @@
             </div>
             <div class="form-group">
               <label>Marca: </label>
-              <input type="text" name="Marca" th:field="*{brand}" class="form-control" placeholder="Digite la marca" required>
+              <!---->
+              <select name="Marca" th:field="*{brand}" class="form-control">
+                <option value="HP">HP</option>
+                <option value="Lenovo">Lenovo</option>
+                <option value="Dell">Dell</option>
+                <option value="Huawei">Huawei</option>
+                <option value="Razer">Razer</option>
+                <option value="Toshiba">Toshiba</option>
+                <option value="Redmi">Redmi</option>
+                <option value="Samsung">Samsung</option>
+                <option value="Apple">Apple</option>
+                <option value="Otro">Otro</option>
+              </select>
             </div>
+
+
             <div class="form-group">
               <label>Proveedor: </label>
-              <input type="text" name="Proveedor" th:field="*{supplier}" class="form-control" placeholder="Digite el Proveedor" required>
+              <input type="text" name="Proveedor" th:field="*{supplier}" class="form-control" placeholder="Digite el Proveedor" required>              
             </div>
             <div class="form-group">
               <label>Fecha de elaboracion: </label>

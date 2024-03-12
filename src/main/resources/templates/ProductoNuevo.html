@@ -59,7 +59,7 @@
             <div class="form-group">
               <label>Marca: </label>
               <!---->
-              <select name="Marca" id="marcas" th:field="*{brand}" class="form-control">
+              <select name="MarcaSeleccionada" id="MarcaSeleccionada" th:field="*{brand}" class="form-control">
                 <option value="HP">HP</option>
                 <option value="Lenovo">Lenovo</option>
                 <option value="Dell">Dell</option>
@@ -71,18 +71,15 @@
                 <option value="Apple">Apple</option>
                 <option value="Otro">Otro</option>
               </select>
-              <input type="text" id="otraMarca" name="OtraMarca" th:field="*{brand}" class="form-control" placeholder="Digite su marca" style="display: none;">
+              <input type="text" id="otraMarcaX" name="OtraMarca" th:field="*{brand}" class="form-control" placeholder="Digite su marca" style="display: none;">
             </div>
 
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
             <script>
               $(document).ready(function() {
-                  $('#marcas').change(function() {
+                  $('#MarcaSeleccionada').change(function() {
                       if ($(this).val() === 'Otro') {
-                          $('#otraMarca').show();
-                      }else {
-                          $('#otraMarca').hide();
-                      }
+                          $('#otraMarcaX').show();}
                   });
               });
             </script>
@@ -98,7 +95,7 @@
                 <option value="Cnt">Cnt</option>
                 <option value="Otro">Otro</option>
               </select>
-              <input type="text" name="Proveedor" th:field="*{supplier}" class="form-control" placeholder="Digite su Proveedor" required>              
+              <!--<input type="text" name="Proveedor" th:field="*{supplier}" class="form-control" placeholder="Digite su Proveedor" required> -->             
             </div>
             <div class="form-group">
               <label>Fecha de elaboracion: </label>

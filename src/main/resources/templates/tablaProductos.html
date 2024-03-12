@@ -62,6 +62,9 @@
           <th scope="col">Proveedor</th>
           <th scope="col">Fecha de elaboracion</th>
           <th scope="col">Precio</th>
+          <th>
+            <a class="btn btn-primary" th:href="@{'/editar/' + ${producto.id}}">Editar</a>
+          </th>
         </tr>
       </thead>
       <tbody>

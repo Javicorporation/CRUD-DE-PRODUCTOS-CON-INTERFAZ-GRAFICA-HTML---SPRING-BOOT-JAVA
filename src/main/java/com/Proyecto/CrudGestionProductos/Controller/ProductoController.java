@@ -61,7 +61,7 @@ public class ProductoController {
     
     @RequestMapping("/Nuevo/{id}")
     public ModelAndView ProductoEditado(@PathVariable("id") Long id){
-        ModelAndView model = new ModelAndView("Producto_editado");
+        ModelAndView model = new ModelAndView("EditarProducto");
         Producto producto = imProductoService.findByIdPro(id);
         model.addObject("producto", producto);
         return model;

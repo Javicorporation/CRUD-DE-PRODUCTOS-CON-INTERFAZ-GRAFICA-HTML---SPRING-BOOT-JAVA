@@ -59,7 +59,7 @@ public class ProductoController {
         return "redirect:productos";
     } 
     
-    @RequestMapping("/Nuevo/{id}")
+    @RequestMapping("/editar/{id}")
     public ModelAndView ProductoEditado(@PathVariable(name="id") Long id){
         ModelAndView model = new ModelAndView("EditarProducto");
         Producto producto = imProductoService.findByIdPro(id);

@@ -62,9 +62,7 @@
           <th scope="col">Proveedor</th>
           <th scope="col">Fecha de elaboracion</th>
           <th scope="col">Precio</th>
-          <th>
-            <a class="btn btn-primary" th:href="@{'/editar/' + ${producto.id}}">Editar</a>
-          </th>
+          
         </tr>
       </thead>
       <tbody>
@@ -75,6 +73,10 @@
           <td th:text="${producto.supplier}"></td>
           <td th:text="${producto.fechaElb}"></td>
           <td th:text="${producto.price}"></td>
+          <td>
+            <th>
+              <a class="btn btn-primary" th:href="@{'/editar/' + ${producto.id}}">Editar</a>
+          </td>
 
         </tr>
       </tbody>

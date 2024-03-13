@@ -66,5 +66,10 @@ public class ProductoController {
         model.addObject("producto", producto);
         return model;
     }
+    @RequestMapping("/eliminar/{id}")
+    public String eliminarProducto(@PathVariable(name="id") Long id){
+        imProductoService.delete(id);
+        return "redirect:/productos";
+    }
 
 }

@@ -73,9 +73,9 @@ public class ProductoController {
         return "redirect:/productos";
     }
 
-     @RequestMapping()
-     public String buscarProducto(@RequestParam(name ="name, brand,supplier") String name, String brand, String supplier, Model model){
-        List<Producto> productosEncontrados = imProductoService.busquedaProductos(name, brand, supplier);
+    @RequestMapping("/buscar")
+    public String buscarProducto(@RequestParam(name = "name") String name, @RequestParam(name = "brand") String brand, @RequestParam(name = "supplier") String supplier, Model model){
+        List<Producto> productosEncontrados = imProductoService.findByNombreContainingAndMarcaContainingAndProveedorContaining(name, brand, supplier);
         model.addAttribute("productoss", productosEncontrados);
         return "tablaProductos";
      }

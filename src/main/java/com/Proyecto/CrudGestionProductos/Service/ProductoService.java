@@ -54,9 +54,11 @@ public class ProductoService implements ImProductoService{
     }
 
     @Override
-    public List<Producto>busquedaProductos(String name, String brand, String supplier){
-        return productoRepository.buscarProducto(name, brand, supplier);
+    public List<Producto>findByNombreContainingAndMarcaContainingAndProveedorContaining(String name, String brand, String supplier){
+        return productoRepository.findByNombreContainingAndMarcaContainingAndProveedorContaining(name, brand, supplier);
     }
+
+  
 
     
 

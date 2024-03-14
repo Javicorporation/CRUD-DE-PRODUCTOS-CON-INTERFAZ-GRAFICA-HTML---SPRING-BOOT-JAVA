@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.Proyecto.CrudGestionProductos.Service.ImProductoService;
@@ -71,5 +72,12 @@ public class ProductoController {
         imProductoService.delete(id);
         return "redirect:/productos";
     }
+
+     @RequestMapping()
+     public String buscarProducto(@RequestParam(name ="name, brand,supplier") String name, String brand, String supplier, Model model){
+        List<Producto> productosEncontrados = imProductoService.busquedaProductos(name, brand, supplier);
+        model.addAttribute("productoss", productosEncontrados);
+        return "tablaProductos";
+     }
 
 }

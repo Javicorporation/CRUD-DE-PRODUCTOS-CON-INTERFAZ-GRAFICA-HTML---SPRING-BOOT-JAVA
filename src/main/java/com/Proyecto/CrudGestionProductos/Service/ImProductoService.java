@@ -6,7 +6,7 @@ import com.Proyecto.CrudGestionProductos.model.Producto;
 
 public interface ImProductoService {
 
-    List<Producto> getListAll();
+    List<Producto> getListAll(String Queery);
 
     Producto findByIdPro(long id);
 
@@ -15,7 +15,5 @@ public interface ImProductoService {
     void delete(long id);
 
     Producto update(long id, Producto productoUpdate);
-
-    List<Producto> findByNombreContainingAndMarcaContainingAndProveedorContaining(String name, String brand, String supplier);
 
 }

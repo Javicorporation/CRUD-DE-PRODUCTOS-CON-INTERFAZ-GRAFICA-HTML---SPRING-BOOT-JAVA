@@ -16,7 +16,10 @@ public class ProductoService implements ImProductoService{
 
 
     @Override
-    public List<Producto> getListAll(){
+    public List<Producto> getListAll(String Queery){
+        if(Queery != null){
+            return productoRepository.findAll(Queery);
+        }
         return (List<Producto>)productoRepository.findAll();
     }
 
@@ -53,10 +56,9 @@ public class ProductoService implements ImProductoService{
         }
     }
 
-    @Override
-    public List<Producto>findByNombreContainingAndMarcaContainingAndProveedorContaining(String name, String brand, String supplier){
-        return productoRepository.findByNombreContainingAndMarcaContainingAndProveedorContaining(name, brand, supplier);
-    }
+    
+
+    
 
   
 

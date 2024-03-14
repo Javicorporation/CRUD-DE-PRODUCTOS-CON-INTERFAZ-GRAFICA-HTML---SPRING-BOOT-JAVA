@@ -15,5 +15,7 @@ public interface ImProductoService {
     void delete(long id);
 
     Producto update(long id, Producto productoUpdate);
+    
+    List<Producto> busquedaProductos(String name, String brand, String supplier);
 
 }

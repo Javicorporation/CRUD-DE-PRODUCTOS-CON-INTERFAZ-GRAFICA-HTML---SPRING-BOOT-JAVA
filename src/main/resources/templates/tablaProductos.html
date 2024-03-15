@@ -43,11 +43,13 @@
           <a class="nav-link" href="/Nuevo" target="_blank">Nuevo Producto</a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0" th:action="@{/buscar}" method="get">
-        <input class="form-control mr-sm-2" type="search" placeholder="Name" aria-label="Name" name="name">
-        <input class="form-control mr-sm-2" type="search" placeholder="Brand" aria-label="Brand" name="brand">
-        <input class="form-control mr-sm-2" type="search" placeholder="Supplier" aria-label="Supplier" name="supplier">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <form class="form-inline my-2 my-lg-0" th:action="@{/productos}" >
+        <div>
+          <input class="form-control mr-sm-2" type="search" id="Queery" name="Queery"  th:value="${Queery}" placeholder="¿Que buscas sapo?" aria-label="Supplier" required>
+        </div>
+        <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
+        &nbsp;
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Clean</button>
     </form>
     </div>
   </nav>
@@ -69,7 +71,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr th:each="producto:${productoss}">
+        <tr th:each="producto:${productos}">
           <td th:text="${producto.id}"></td>
           <td th:text="${producto.name}"></td>
           <td th:text="${producto.brand}"></td>

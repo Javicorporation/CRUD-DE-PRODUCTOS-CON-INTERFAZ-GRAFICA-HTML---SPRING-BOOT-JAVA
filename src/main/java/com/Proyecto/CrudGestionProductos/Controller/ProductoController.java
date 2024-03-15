@@ -3,6 +3,7 @@ package com.Proyecto.CrudGestionProductos.Controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -40,10 +41,11 @@ public class ProductoController {
     }
 
     @GetMapping("/productos")
-    public String verPaginaTabla(Model model){
-        String Queery = "CNT";
+    public String verPaginaTabla(Model model, @Param("Queery") String Queery){      
         List<Producto> productos = imProductoService.getListAll(Queery);
-        model.addAttribute("productoss", productos);
+        
+        model.addAttribute("productos", productos);
+        model.addAttribute("Querry", productos);
         return "tablaProductos";
     }
        

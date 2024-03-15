@@ -10,7 +10,9 @@ import com.Proyecto.CrudGestionProductos.model.Producto;
 
 @Repository
 public interface ProductoRepository extends JpaRepository<Producto, Long>{
-    @Query("SELECT p FROM Producto p WHERE p.name LIKE %?1%"+"OR p.brand LIKE %?1%"+"OR p.supplier LIKE %?1%")
+    @Query("SELECT p FROM Producto p WHERE"
+            + " CONCAT (p.id, p.name, p.brand, p.supplier)"
+            + " LIKE %?1%")
     List<Producto> findAll(String Queery);
 
 }

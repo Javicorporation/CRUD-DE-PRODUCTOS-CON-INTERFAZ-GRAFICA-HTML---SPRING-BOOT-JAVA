@@ -41,7 +41,7 @@ public class ProductoController {
 
     @GetMapping("/productos")
     public String verPaginaTabla(Model model){
-        String Queery = "teclado";
+        String Queery = "CNT";
         List<Producto> productos = imProductoService.getListAll(Queery);
         model.addAttribute("productoss", productos);
         return "tablaProductos";

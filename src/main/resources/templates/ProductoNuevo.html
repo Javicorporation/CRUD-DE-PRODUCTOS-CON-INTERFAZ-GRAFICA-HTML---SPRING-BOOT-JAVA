@@ -59,7 +59,7 @@
             <div class="form-group">
               <label>Marca: </label>
               <!---->
-              <select name="MarcaSeleccionada" id="MarcaSeleccionada" th:field="*{brand}" class="form-control">
+              <select id="MarcaSeleccionada" th:field="*{brand}" class="form-control" onchange="OtraMarca()">
                 <option value="HP">HP</option>
                 <option value="Lenovo">Lenovo</option>
                 <option value="Dell">Dell</option>
@@ -71,17 +71,20 @@
                 <option value="Apple">Apple</option>
                 <option value="Otro">Otro</option>
               </select>
-              <input type="text" id="otraMarcaX" name="OtraMarca" th:field="*{brand}" class="form-control" placeholder="Digite su marca" style="display: none;">
+              <input type="text" id="otraMarcaX" th:field="*{brand}" class="form-control" placeholder="Digite su marca" style="display: none;">
             </div>
 
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
             <script>
-              $(document).ready(function() {
-                  $('#MarcaSeleccionada').change(function() {
-                      if ($(this).val() === 'Otro') {
-                          $('#otraMarcaX').show();}
-                  });
-              });
+              function OtraMarca(){
+                var select = document.getElementById("MarcaSeleccionada");
+                var input = document.getElementById("otraMarcaX");
+                if(select.value == "Otro"){
+                  otraMarcaX.style.display = "block";
+                }else{
+                  otraMarcaX.style.display = "none";
+                }
+              }
             </script>
 
             <div class="form-group">

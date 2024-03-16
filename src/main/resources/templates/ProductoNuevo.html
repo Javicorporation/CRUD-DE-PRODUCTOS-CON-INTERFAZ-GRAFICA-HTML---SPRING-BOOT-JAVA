@@ -74,7 +74,7 @@
                 <option value="Apple">Apple</option>
                 <option value="Otro">Otro</option>
               </select>
-              <input type="text" id="otraMarcaX" th:field="*{brand}" class="form-control" placeholder="Digite su marca" style="display: none;" oninput="asignarMarca()">
+              <input type="text" id="otraMarcaX" th:field="*{brand}" class="form-control" placeholder="Digite su marca" style="display: none;">
             </div>
             <script>
               function OtraMarca(){
@@ -85,14 +85,8 @@
                   select.value = otraMarcaX.value;
                 }else{
                   otraMarcaX.style.display = "none";
+                  input.value = select.value;
                 }
-              }
-              function asignarMarca() {
-                var select = document.getElementById("MarcaSeleccionada");
-                var input = document.getElementById("otraMarcaX");
-                if(select.value == "Otro"){
-                  select.value = otraMarcaX.value;
-                }              
               }
             </script>
 
